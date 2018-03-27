@@ -32,58 +32,17 @@ a:active { text-decoration: underline; color: #333399; }
 }
 
 /* サブメニューリスト*/
-#box1 {
-	border :solid;
-	text-align : center;
-	float : left;
-	width: 16.15%;
-	height: 70px;
-	line-height: 70px;
+table {
+   table-layout: fixed;     /* 固定レイアウト */
+   border-collapse: collapse; /* 隣接する枠線を重ねる */
+   border: 2px solid green;   /* 外枠：2px,実線,緑色 */
+   width: 100%;              /* 表の横幅：350ピクセル */
+   height : 60px;
+   text-align : center;
 }
-
-#box2 {
-	border :solid;
-	text-align : center;
-	float : left;
-	width: 16.15%;
-	height: 70px;
-	line-height: 70px;
-}
-
-#box3 {
-	border :solid;
-	text-align : center;
-	float : left;
-	width: 16.15%;
-	height: 70px;
-	line-height: 70px;
-}
-
-#box4 {
-	border :solid;
-	text-align : center;
-	float : left;
-	width: 16.15%;
-	height: 70px;
-	line-height: 70px;
-}
-
-#box5 {
-	border :solid;
-	text-align : center;
-	float : left;
-	width: 16.15%;
-	height: 70px;
-	line-height: 70px;
-}
-
-#box6 {
-	border :solid;
-	text-align : center;
-	float : left;
-	width: 16.15%;
-	height: 70px;
-	line-height: 70px;
+table td {
+   border: 1px solid green; /* 表内側の線：1px,実線,緑色 */
+   padding: 3px;            /* セル内側の余白：3ピクセル */
 }
 
 /* コントロールメニュー */
