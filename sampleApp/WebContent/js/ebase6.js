@@ -39,6 +39,9 @@ $(function(){
 			return false;
 		});
 	});
+	
+	//2018-3-27 T.Tatsuya Add
+	//追加処理
 
 	// 2018-03-22 M.Enya Add
 	// 追加処理
