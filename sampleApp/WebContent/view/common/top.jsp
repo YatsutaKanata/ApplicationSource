@@ -25,30 +25,18 @@
 	<div id="ebase6_submenu">
 		品物一覧
 	</div>
+	
+	<table>
+	<tr><td>品物一覧</td><td>在庫管理</td><td>発注作業</td><td>品物検品</td><td>棚卸作業</td><td>履歴表示</td>
+	</table>
 
-	 <div id="box1">
-	 box1
-	 </div>
-
-	 <div id="box2">
-	 box2
-	 </div>
-
-	 <div id="box3">
-	 box3
-	 </div>
-
-	 <div id="box4">
-	 box4
-	 </div>
-
-	 <div id="box5">
-	 box5
-	 </div>
-
-	 <div id="box6">
-	 box6
-	 </div>
+	<!-- Sub Menu List-->
+	<a id="goodsView" href="javascript:void(0)">品物一覧 </a>
+	<a id="stockManegement" href="javascript:void(0)">在庫管理 </a>
+	<a id="orderingWork" href="javascript:void(0)">発注作業 </a>
+	<a id="goodsCheck" href="javascript:void(0)">品物検品 </a>
+	<a id="Inventories" href="javascript:void(0)">棚卸作業 </a>
+	<a id="History" href="javascript:void(0)">履歴表示 </a>
 
 	<!-- Body  -->
 	<div id="ebase6_body">
