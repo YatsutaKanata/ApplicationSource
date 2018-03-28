@@ -21,22 +21,20 @@
 		在庫管理システム
 	</div>
 
-	<!-- Sub menu -->
+	<!-- Sub Menu -->
 	<div id="ebase6_submenu">
 		品物一覧
 	</div>
-	
-	<table>
-	<tr><td>品物一覧</td><td>在庫管理</td><td>発注作業</td><td>品物検品</td><td>棚卸作業</td><td>履歴表示</td>
-	</table>
 
 	<!-- Sub Menu List-->
-	<a id="goodsView" href="javascript:void(0)">品物一覧 </a>
-	<a id="stockManegement" href="javascript:void(0)">在庫管理 </a>
-	<a id="orderingWork" href="javascript:void(0)">発注作業 </a>
-	<a id="goodsCheck" href="javascript:void(0)">品物検品 </a>
-	<a id="Inventories" href="javascript:void(0)">棚卸作業 </a>
-	<a id="History" href="javascript:void(0)">履歴表示 </a>
+	<table>
+	<tr><td><a id="goodsView" href="javascript:void(0)">品物一覧 </a></td>
+	<td><a id="stockManegement" href="javascript:void(0)">在庫管理 </a></td>
+	<td><a id="orderingWork" href="javascript:void(0)">発注作業 </a></td>
+	<td><a id="goodsCheck" href="javascript:void(0)">品物検品 </a></td>
+	<td><a id="Inventories" href="javascript:void(0)">棚卸作業 </a></td>
+	<td><a id="History" href="javascript:void(0)">履歴表示 </a></td></tr>
+	</table>
 
 	<!-- Body  -->
 	<div id="ebase6_body">
