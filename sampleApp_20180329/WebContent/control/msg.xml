@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dqube>
+	<message id="TOPDBEXE">
+		<ja>SQLを入力してください。</ja>
+		<en>INPUT SQL.</en>
+	</message>
+
+	<message id="BTNSUBMIT">
+		<ja>実行</ja>
+		<en>Submit</en>
+	</message>
+
+	<message id="TOPXMLEXE">
+		<ja>XMLを選択してください</ja>
+		<en>SELECT XML.</en>
+	</message>
+
+	<message id="LBXMLSELCT">
+		<ja>XMLの選択</ja>
+		<en>XML Selection</en>
+	</message>
+
+	<message id="LBXMLKEY">
+		<ja>XMLのキー</ja>
+		<en>XML KEY NAME</en>
+	</message>
+	<message id="ADDWORK">
+		<ja>ID / NAME</ja>
+		<en>ID / NAME</en>
+	</message>
+</dqube>
