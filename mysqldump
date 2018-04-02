@@ -1,0 +1,184 @@
+-- MySQL dump 10.14  Distrib 5.5.56-MariaDB, for Linux (x86_64)
+--
+-- Host: localhost    Database: SAMPLEDB
+-- ------------------------------------------------------
+-- Server version	5.5.56-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `INVENTORIES_HISTORY`
+--
+
+DROP TABLE IF EXISTS `INVENTORIES_HISTORY`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `INVENTORIES_HISTORY` (
+  `DAY` date NOT NULL,
+  `EARNINGS` int(11) NOT NULL,
+  `SPENT_NUM` int(11) NOT NULL,
+  `SPENT_AMT` int(11) NOT NULL,
+  `CONPENSATION_NUM` int(11) DEFAULT NULL,
+  `CONPENSATION_AMT` int(11) DEFAULT NULL,
+  PRIMARY KEY (`DAY`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `INVENTORIES_HISTORY`
+--
+
+LOCK TABLES `INVENTORIES_HISTORY` WRITE;
+/*!40000 ALTER TABLE `INVENTORIES_HISTORY` DISABLE KEYS */;
+/*!40000 ALTER TABLE `INVENTORIES_HISTORY` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ITEM_MST`
+--
+
+DROP TABLE IF EXISTS `ITEM_MST`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ITEM_MST` (
+  `id` int(11) NOT NULL,
+  `ITEM_NAME` varchar(30) NOT NULL,
+  `UNIT` varchar(10) NOT NULL,
+  `COST` int(11) NOT NULL,
+  `EXPDAYS` varchar(10) DEFAULT NULL,
+  `CAUTION` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ITEM_MST`
+--
+
+LOCK TABLES `ITEM_MST` WRITE;
+/*!40000 ALTER TABLE `ITEM_MST` DISABLE KEYS */;
+/*!40000 ALTER TABLE `ITEM_MST` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `SAMPLETBL`
+--
+
+DROP TABLE IF EXISTS `SAMPLETBL`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `SAMPLETBL` (
+  `id` int(11) DEFAULT NULL,
+  `name` varchar(16) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `SAMPLETBL`
+--
+
+LOCK TABLES `SAMPLETBL` WRITE;
+/*!40000 ALTER TABLE `SAMPLETBL` DISABLE KEYS */;
+INSERT INTO `SAMPLETBL` VALUES (1,'data1'),(2,'data2'),(3,'data3');
+/*!40000 ALTER TABLE `SAMPLETBL` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `STOCK_HISTORY`
+--
+
+DROP TABLE IF EXISTS `STOCK_HISTORY`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `STOCK_HISTORY` (
+  `DAY` date NOT NULL,
+  `STOCK` int(11) NOT NULL,
+  `CONSUMPTION` int(11) NOT NULL,
+  PRIMARY KEY (`DAY`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `STOCK_HISTORY`
+--
+
+LOCK TABLES `STOCK_HISTORY` WRITE;
+/*!40000 ALTER TABLE `STOCK_HISTORY` DISABLE KEYS */;
+/*!40000 ALTER TABLE `STOCK_HISTORY` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `SUPPLY_HISTORY`
+--
+
+DROP TABLE IF EXISTS `SUPPLY_HISTORY`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `SUPPLY_HISTORY` (
+  `DAY` date NOT NULL,
+  `SUPPLY` int(11) NOT NULL,
+  `ORDER_NUM` int(11) NOT NULL,
+  PRIMARY KEY (`DAY`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `SUPPLY_HISTORY`
+--
+
+LOCK TABLES `SUPPLY_HISTORY` WRITE;
+/*!40000 ALTER TABLE `SUPPLY_HISTORY` DISABLE KEYS */;
+/*!40000 ALTER TABLE `SUPPLY_HISTORY` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `accounts`
+--
+
+DROP TABLE IF EXISTS `accounts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `accounts` (
+  `accountid` varchar(16) NOT NULL,
+  `name_global` varchar(40) NOT NULL,
+  `name_locale` varchar(40) NOT NULL,
+  `mailaddr` varchar(64) NOT NULL,
+  `signinid` varchar(16) NOT NULL,
+  `signinpw` varchar(64) NOT NULL,
+  `pwupdate` date DEFAULT NULL,
+  `createdate` date DEFAULT NULL,
+  `expired` tinyint(1) DEFAULT NULL,
+  `admin` tinyint(1) DEFAULT NULL,
+  `description` varchar(256) NOT NULL DEFAULT '',
+  PRIMARY KEY (`accountid`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `accounts`
+--
+
+LOCK TABLES `accounts` WRITE;
+/*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-04-02 16:02:47
